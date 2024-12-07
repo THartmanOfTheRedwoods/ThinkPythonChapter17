@@ -74,14 +74,15 @@ class PokerHand( Hand ):
         return self.has_flush() and self.has_straight()
 
     # Exercise 06
-    def has_n(self, counter, need):
+    @staticmethod
+    def has_n(counter, need):
         PokerHand.count_aces(counter)
         return any(count >= need for count in counter.values() )
 
     # Exercise 06
     def has_pair(self):
         counter = self.get_rank_counts()
-        return self.has_n(counter, 2)
+        return PokerHand.has_n(counter, 2)
 
     # Exercise 07
     def has_full_house(self):
