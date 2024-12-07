@@ -70,6 +70,7 @@ class PokerHand( Hand ):
 
     # Exercise 05
     # TODO: Make sure this method handles when flush cards are different than straight cards but both still exist.
+    #       This should work for Poker with only 5 cards, so committing for now.
     def has_straight_flush(self):
         return self.has_flush() and self.has_straight()
 
