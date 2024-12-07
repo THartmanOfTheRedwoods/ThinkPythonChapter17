@@ -57,7 +57,7 @@ class PokerHand( Hand ):
             if one_type_aces > 0:
                 del counter[1]  # Deleting one type aces so we don't double count
             counter[14] = aces  # No need to return because we modify the object.
-            if for_straight:  # For straigts, double counting doesn't matter, and helps for straights including aces.
+            if for_straight:  # For straights, double counting doesn't matter, and helps for straights including aces.
                 counter[1] = aces
 
     # Exercise 04
