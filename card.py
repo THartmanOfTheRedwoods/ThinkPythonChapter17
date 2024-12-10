@@ -9,7 +9,7 @@ class Card:
 
     def __init__(self, suit, rank):
         self.suit = suit
-        self.rank = rank
+        self.rank = 14 if rank == 1 else rank  # Gurantee Aces will be 14
 
     def to_tuple(self):
         return self.suit, self.rank
